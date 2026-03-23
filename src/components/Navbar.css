@@ -1,0 +1,117 @@
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0b0b0b;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Subtle grid pattern background */
+.nav-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-size: 50px 50px;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.menu-button {
+    position: fixed;
+    top: 30px;
+    right: 4vw;
+    z-index: 999;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.close-button {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+}
+
+.close-button:hover {
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.menu-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+    /* Large spacing */
+}
+
+.menu-item {
+    overflow: hidden;
+    /* For any slide-up clipping if needed */
+}
+
+.menu-item a {
+    color: #555555;
+    /* Dim gray by default for inactive/non-hovered */
+    text-decoration: none;
+    font-family: 'Inter', 'Poppins', sans-serif;
+    font-size: clamp(50px, 8vw, 120px);
+    /* Responsive: 80-120px desktop, smaller mobile */
+    font-weight: 800;
+    /* Very large bold text */
+    text-transform: uppercase;
+    line-height: 1;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+/* Hover Effect: Hovered bright white, others dim gray */
+.menu-list:hover .menu-item a {
+    color: #333333;
+    /* Dim others down even more if desired, or keep as #555 */
+}
+
+.menu-list .menu-item a:hover {
+    color: #ffffff;
+    /* Hovered item bright white */
+}
+
+/* Default state before hover interaction */
+.menu-item a {
+    color: #ffffff;
+}
+
+.menu-list:hover .menu-item a {
+    color: #555555;
+    /* When the list is hovered, unhovered items turn dim gray */
+}
+
+.menu-list .menu-item a:hover {
+    color: #ffffff;
+    /* Hovered item pops bright white */
+}

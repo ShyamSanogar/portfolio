@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
+@font-face {
+  font-family: 'ClashDisplayCustom';
+  src: url('./components/ClashDisplay-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+  --border: 0 0% 15%;
+  --muted: 0 0% 10%;
+  --muted-foreground: 0 0% 65%;
+
+  --bg-color: #050505;
+  /* Near pure black for better contrast handling */
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.6);
+  --accent-color: #FFFFFF;
+  --card-bg: #111111;
+  --card-border: rgba(255, 255, 255, 0.1);
+  --grid-line: rgba(255, 255, 255, 0.05);
+
+  --font-display: 'ClashDisplayCustom', 'Clash Display', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: 'ClashDisplayCustom', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  /* letter-spacing: -0.03em; */
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  scroll-behavior: auto; /* Disabled native smooth scroll for Lenis */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  /* Subtle grid pattern background */
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 5rem 5rem;
+  background-position: center center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Typography styles Porto-like (Brutalist, High Contrast) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1;
+}
+
+h1 {
+  font-size: clamp(4rem, 12vw, 12rem);
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: clamp(3rem, 8vw, 8rem);
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  letter-spacing: -0.02em;
+}
+
+p {
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  line-height: 1.5;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Small Caps utility */
+.small-caps {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Prefix lines (e.g. // SECTION) */
+.section-prefix {
+  display: inline-block;
+  font-family: var(--font-sans);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 2rem;
+}
+
+.section-prefix::before {
+  content: '// ';
+  color: var(--accent-color);
+}
