@@ -9,6 +9,7 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import ResumeButton from './components/ResumeButton';
+import CustomCursor from './components/CustomCursor';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -40,6 +41,7 @@ function App() {
 
   return (
     <>
+      <CustomCursor />
       <AnimatePresence mode="wait">
         {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
       </AnimatePresence>
