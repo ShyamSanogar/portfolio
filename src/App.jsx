@@ -6,6 +6,8 @@ import LoadingScreen from './components/LoadingScreen';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Achievements from './components/Achievements';
+import Certificates from './components/Certificates';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import ResumeButton from './components/ResumeButton';
@@ -52,6 +54,8 @@ function App() {
           <About />
           <Skills />
           <Projects />
+          <Achievements />
+          <Certificates />
           <Experience />
           <Contact />
         </main>

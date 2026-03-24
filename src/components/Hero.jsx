@@ -254,12 +254,12 @@ const Hero = ({ menuOpen, setMenuOpen }) => {
                                     ))}
                                 </div>
 
-                                {[{ id: 'top', label: 'HOME' }, { id: 'skills', label: 'SKILLS' }, { id: 'experience', label: 'EXPERIENCE' }].map((item, index) => (
+                                {[{ id: 'home', label: 'HOME' }, { id: 'skills', label: 'SKILLS' }, { id: 'projects', label: 'PROJECTS' }, { id: 'achievements', label: 'ACHIEVEMENTS' }, { id: 'certificates', label: 'CERTIFICATES' }, { id: 'experience', label: 'EXPERIENCE' }].map((item, index) => (
                                     <div key={item.id} style={{ overflow: 'hidden', padding: '5px 2vw' }}>
                                         <motion.a
-                                            href={item.id === 'top' ? '#' : `#${item.id}`}
+                                            href={item.id === 'home' ? '#' : `#${item.id}`}
                                             onClick={() => {
-                                                if (item.id === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
+                                                if (item.id === 'home') window.scrollTo({ top: 0, behavior: 'smooth' });
                                                 setMenuOpen(false);
                                             }}
                                             initial={{ y: '100%' }} // Start pushed below clipping mask
@@ -272,9 +272,9 @@ const Hero = ({ menuOpen, setMenuOpen }) => {
                                             }}
                                             style={{
                                                 display: 'block',
-                                                color: item.id === 'top' ? 'var(--text-secondary)' : 'var(--text-primary)',
+                                                color: item.id === 'home' ? 'var(--text-secondary)' : 'var(--text-primary)',
                                                 fontFamily: 'var(--font-heading)',
-                                                fontSize: 'clamp(3rem, 10vw, 8rem)', // Reduced text size
+                                                fontSize: 'clamp(2.5rem, 6.5vw, 6rem)', // Refined size to fit 6 items 100% cleanly
                                                 lineHeight: 0.85,
                                                 letterSpacing: '-0.05em',
                                                 textAlign: 'center',
@@ -284,10 +284,10 @@ const Hero = ({ menuOpen, setMenuOpen }) => {
                                                 textTransform: 'uppercase'
                                             }}
                                             onMouseEnter={(e) => {
-                                                e.currentTarget.style.color = item.id === 'top' ? 'var(--text-primary)' : 'var(--text-secondary)'; // Turn grey on hover like template
+                                                e.currentTarget.style.color = item.id === 'home' ? 'var(--text-primary)' : 'var(--text-secondary)'; // Turn grey on hover like template
                                             }}
                                             onMouseLeave={(e) => {
-                                                e.currentTarget.style.color = item.id === 'top' ? 'var(--text-secondary)' : 'var(--text-primary)';
+                                                e.currentTarget.style.color = item.id === 'home' ? 'var(--text-secondary)' : 'var(--text-primary)';
                                             }}
                                         >
                                             {item.label}
