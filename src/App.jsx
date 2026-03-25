@@ -13,6 +13,7 @@ import Contact from './components/Contact';
 import ResumeButton from './components/ResumeButton';
 import CustomCursor from './components/CustomCursor';
 
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
