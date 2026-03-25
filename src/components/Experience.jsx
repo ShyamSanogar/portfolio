@@ -17,16 +17,16 @@ const Experience = () => {
     ];
 
     return (
-        <section id="experience" className="section container" style={{ padding: '8rem 2rem' }}>
-            <div className="section-prefix">Journey</div>
+        <section id="training" className="section container" style={{ padding: '8rem 2rem' }}>
+            <div className="section-prefix">Education</div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', marginTop: '4rem' }}>
 
                 {/* Left Side Header */}
                 <div>
                     <h2 style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)', lineHeight: 1, textTransform: 'uppercase' }}>
-                        JOURNEY &<br />
-                        HISTORY<span style={{ color: '#7cfc00' }}>.</span>
+                        TRAINING &<br />
+                        EDUCATION<span style={{ color: '#7cfc00' }}>.</span>
                     </h2>
                 </div>
 

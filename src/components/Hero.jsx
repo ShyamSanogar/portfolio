@@ -254,7 +254,7 @@ const Hero = ({ menuOpen, setMenuOpen }) => {
                                     ))}
                                 </div>
 
-                                {[{ id: 'home', label: 'HOME' }, { id: 'skills', label: 'SKILLS' }, { id: 'projects', label: 'PROJECTS' }, { id: 'achievements', label: 'ACHIEVEMENTS' }, { id: 'certificates', label: 'CERTIFICATES' }, { id: 'experience', label: 'EXPERIENCE' }].map((item, index) => (
+                                {[{ id: 'home', label: 'HOME' }, { id: 'skills', label: 'SKILLS' }, { id: 'projects', label: 'PROJECTS' }, { id: 'achievements', label: 'ACHIEVEMENTS' }, { id: 'certificates', label: 'CERTIFICATES' }, { id: 'training', label: 'TRAINING & EDUCATION' }].map((item, index) => (
                                     <div key={item.id} style={{ overflow: 'hidden', padding: '5px 2vw' }}>
                                         <motion.a
                                             href={item.id === 'home' ? '#' : `#${item.id}`}

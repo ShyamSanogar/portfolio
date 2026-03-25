@@ -14,7 +14,7 @@ const Navbar = () => {
         { id: 'top', label: 'HOME' },
         { id: 'skills', label: 'SKILL' },
         { id: 'projects', label: 'PROJECT' },
-        { id: 'experience', label: 'EXPERIENCES' },
+        { id: 'training', label: 'TRAINING & EDUCATION' },
     ];
 
     const { contextSafe } = useGSAP({ scope: containerRef });
